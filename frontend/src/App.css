@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+.loader {
+  height: 17px;
+  width: 17px;
+  border: solid 5px white;
+  border-right: solid 5px transparent;
+  border-radius: 50%;
+  animation: loading 1s linear 0s infinite normal forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

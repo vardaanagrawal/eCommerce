@@ -1,0 +1,96 @@
+.account {
+  padding: 60px 0px;
+  height: calc(100vh - 120px);
+  background: url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+  display: flex;
+  justify-content: center;
+}
+.account-box {
+  background-color: white;
+  width: 400px;
+  height: max-content;
+  margin: 50px;
+  padding: 15px;
+  box-shadow: silver 1px 1px 10px;
+}
+.account-head {
+  font-size: xx-large;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.account-name,
+.account-email,
+.account-password {
+  border: solid silver 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.account-title {
+  font-weight: 700;
+}
+.account-edit-btn {
+  padding: 10px 30px;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.account-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.delete-account-btn{
+    padding: 10px 30px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signout-btn{
+    padding: 10px 30px;
+    border: none;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.no-address-box{
+  border: solid silver 1px;
+  padding: 10px ;
+}
+.new-address-btn{
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  background-color: goldenrod;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.del-type-opt{
+  border: solid black 2px;
+  border-radius: 5px;
+  margin: 2px 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.del-type-opt-check{
+  border-color: goldenrod;
+  color: goldenrod;
+}
+.address-body-item{
+  box-shadow: silver 1px 1px 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px;
+}

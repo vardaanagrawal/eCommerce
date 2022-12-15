@@ -1,0 +1,60 @@
+.auth {
+  min-height: 100vh;
+  position: relative;
+  background: url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+}
+.auth-form {
+  border: solid silver 1px;
+  width: 400px;
+  font-size: xx-large;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  position: absolute;
+  top: 15%;
+  right: 10vw;
+  background-color: white;
+}
+.auth-form-head {
+  margin-bottom: 40px;
+  border-bottom: solid silver 1px;
+  font-weight: 700;
+}
+.auth-form form,
+.account-body form {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+.auth-form form input,
+.account-body form input,
+.auth-loader {
+  font-size: large;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 7px;
+  font-family: "Poppins", sans-serif;
+}
+.auth-form form input[type="submit"] ,
+.account-body form input[type="submit"],
+.auth-loader {
+  background-color: goldenrod;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.auth-form form input[type="button"],
+.account-body form input[type="button"] {
+  margin-top: 10px;
+  border: solid silver 1px;
+  cursor: pointer;
+}
+.error-msg {
+  font-size: small;
+  color: red;
+  height: 20px;
+  text-align: right;
+}

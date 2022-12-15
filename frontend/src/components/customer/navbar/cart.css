@@ -1,0 +1,146 @@
+.button3 {
+  font-family: "Poppins", sans-serif;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  font-size: x-large;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+.button3:active {
+  background-color: rgb(180, 136, 26);
+}
+.cart,
+.profile {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  color: black;
+  z-index: 100;
+}
+.cart-box,
+.profile-box {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: -400px;
+  transition: all 0.3s;
+  padding: 0px 20px;
+}
+.cart-box-head,
+.profile-head {
+  font-family: "Poppins", sans-serif;
+  font-size: xx-large;
+  height: 60px;
+  line-height: 60px;
+}
+.cart-box2 {
+  height: calc(100vh - 70px);
+  position: relative;
+  overflow: scroll;
+}
+.cart-foot {
+  position: absolute;
+  bottom: 10px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.cart-body {
+  height: 70vh;
+  border: solid silver 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cart-body-img {
+  width: 80%;
+}
+.cart-body-img img {
+  width: 100%;
+}
+.cart-body-message {
+  font-family: "Poppins", sans-serif;
+  font-size: larger;
+  color: goldenrod;
+}
+.profile-item {
+  border: solid silver 1px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.profile-item i {
+  font-size: xx-large;
+  margin-right: 20px;
+}
+.profile-item-title {
+  font-weight: bold;
+  font-size: large;
+}
+.profile-item-desc {
+  color: grey;
+}
+.profile-body a {
+  color: black;
+  text-decoration: none;
+}
+
+.full-cart-body {
+  border: solid silver 1px;
+  height: 70vh;
+  overflow: scroll;
+  padding: 0px 10px;
+}
+.cart-item {
+  box-shadow: silver 1px 1px 10px;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  display: flex;
+}
+.cart-item-img {
+  height: 100px;
+}
+.cart-item-img img {
+  height: 100%;
+}
+.cart-item-info {
+  height: 90px;
+  width: 140px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.cart-item-qty {
+  width: 100px;
+}
+.cart-item-qty-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.cart-qty-btn {
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+}
+.cart-item-qty-foot{
+  margin-top: 10px;
+}
+.cart-box-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

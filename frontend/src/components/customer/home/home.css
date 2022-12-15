@@ -1,0 +1,116 @@
+.home {
+  padding: 60px 0px 10px 0px;
+  background-color: #eaeded;
+}
+.product-row {
+  width: 94vw;
+  padding: 1vw 2vw;
+  margin: 20px 1vw;
+  background-color: white;
+}
+.product-row-head {
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.product-row-inner {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(10, max-content);
+  overflow: scroll;
+  width: 100%;
+}
+.product-card {
+  height: 280px;
+  width: 240px;
+  margin: 10px;
+  box-shadow: silver 1px 1px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.loading-card {
+  background-color: rgba(229, 229, 229, 0.475);
+  position: relative;
+  overflow: hidden;
+}
+.loading-light {
+  position: absolute;
+  top: -250px;
+  left: -100px;
+  height: 600px;
+  width: 200px;
+  background: linear-gradient(to right, whitesmoke, white, whitesmoke);
+  box-shadow: whitesmoke 15px 15px 20px 30px;
+  transform: rotate(45deg);
+  animation: loading-light 3s linear 0s infinite normal forwards;
+}
+
+@keyframes loading-light {
+  0% {
+    top: -250px;
+    left: -100px;
+  }
+  100% {
+    top: 0px;
+    left: 250px;
+  }
+}
+
+.product-card-img {
+  height: 200px;
+  width: 240px;
+  margin-top: 10px;
+}
+.product-card-img img {
+  height: 100%;
+  width: 100%;
+}
+.product-card-name {
+  font-size: larger;
+  font-weight: 700;
+  height: 15px;
+}
+.product-card-brand {
+  color: rgb(94, 94, 94);
+  height: 30px;
+  margin-top: -5px;
+}
+
+.group-card-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 2vw;
+  position: relative;
+  width: 98vw;
+  margin: 20px 1vw;
+  margin-top: -200px;
+  z-index: 11;
+}
+.group-card {
+  height: 23vw;
+  width: 23vw;
+  background-color: white;
+}
+.group-card-head {
+  font-size: larger;
+  font-weight: bold;
+  margin: 20px 20px 10px 20px;
+}
+.group-card-body {
+  height: 18vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.group-card-body-item {
+  height: 90%;
+  width: 90%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
