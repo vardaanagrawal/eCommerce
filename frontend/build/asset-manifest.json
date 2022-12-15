@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2005395b.css",
+    "main.js": "/static/js/main.bdd2142b.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/poster1.jpg": "/static/media/poster1.e9518febe3ced54f6b8e.jpg",
+    "static/media/laptopposter.jpg": "/static/media/laptopposter.383102414e688833debf.jpg",
+    "index.html": "/index.html",
+    "main.2005395b.css.map": "/static/css/main.2005395b.css.map",
+    "main.bdd2142b.js.map": "/static/js/main.bdd2142b.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2005395b.css",
+    "static/js/main.bdd2142b.js"
+  ]
+}
