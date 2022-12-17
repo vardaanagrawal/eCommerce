@@ -68,7 +68,7 @@
   background-color: whitesmoke;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 480px) {
   .product-box {
     height: calc(100vh - 60px - 4vw);
     width: 96vw;

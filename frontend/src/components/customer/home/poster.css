@@ -67,7 +67,7 @@
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 480px) {
   .poster {
     height: 150px;
   }

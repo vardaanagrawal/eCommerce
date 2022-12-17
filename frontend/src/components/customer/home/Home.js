@@ -21,19 +21,19 @@ export default function Home() {
       type: "Best deals on Mobile",
       data: mobiles,
       deviceType: "mobiles",
-      poster: poster5,
+      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Wireless/AdvantagePrime/BAU/15thNov/D46321486_IN_WLME_Advantage_for_prime_PC_ingress-banner_1500x300.jpg",
     },
     {
       type: "Newly Launched Laptops",
       data: laptops,
       deviceType: "laptops",
-      poster: poster6,
+      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/Smart-choice/D38878434_IN_PC_Laptops_BAU-February-Smart-choice-laptops_1500x300_2.jpg",
     },
     {
       type: "Most productive Tablets",
       data: tablets,
       deviceType: "tablets",
-      poster: poster7,
+      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/LapDay/ASUS-ROG-Gaming_1500-x-300.jpg",
     },
   ];
   return (

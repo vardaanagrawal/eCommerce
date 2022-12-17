@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 480px) {
   .place-orders-box {
     width: 98vw;
     height: max-content;
