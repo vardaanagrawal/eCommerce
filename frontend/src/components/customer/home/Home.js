@@ -7,9 +7,6 @@ import Poster from "./Poster";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { storeDevice } from "../../../redux/actions/storeDevice";
-import poster7 from "../../../images/poster7.jpg";
-import poster5 from "../../../images/poster5.jpg";
-import poster6 from "../../../images/poster6.jpg";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -21,27 +18,28 @@ export default function Home() {
       type: "Best deals on Mobile",
       data: mobiles,
       deviceType: "mobiles",
-      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Wireless/AdvantagePrime/BAU/15thNov/D46321486_IN_WLME_Advantage_for_prime_PC_ingress-banner_1500x300.jpg",
+      poster:
+        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Wireless/AdvantagePrime/BAU/15thNov/D46321486_IN_WLME_Advantage_for_prime_PC_ingress-banner_1500x300.jpg",
     },
     {
       type: "Newly Launched Laptops",
       data: laptops,
       deviceType: "laptops",
-      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/Smart-choice/D38878434_IN_PC_Laptops_BAU-February-Smart-choice-laptops_1500x300_2.jpg",
+      poster:
+        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/Smart-choice/D38878434_IN_PC_Laptops_BAU-February-Smart-choice-laptops_1500x300_2.jpg",
     },
     {
       type: "Most productive Tablets",
       data: tablets,
       deviceType: "tablets",
-      poster: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/LapDay/ASUS-ROG-Gaming_1500-x-300.jpg",
+      poster:
+        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/LapDay/ASUS-ROG-Gaming_1500-x-300.jpg",
     },
   ];
   return (
     <div className="home">
       <Poster />
       {/* -------------------------------------------------------------------------- */}
-      {/* -------------------------------------------------------------------------- */}
-
       <div className="group-card-section">
         <div className="group-card">
           <div className="group-card-head">Top Rated, Premium Quality</div>
@@ -75,14 +73,7 @@ export default function Home() {
               dispatch(storeDevice());
             }}
           >
-            <div
-              className="group-card-body2"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
+            <div className="group-card-body2">
               <img src="https://res.cloudinary.com/dg1awjvew/image/upload/v1670305633/devices/mdbynycotrzzvrpjhuri.jpg"></img>
               Dell Alienware 17
             </div>
@@ -98,14 +89,7 @@ export default function Home() {
               dispatch(storeDevice());
             }}
           >
-            <div
-              className="group-card-body2"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
+            <div className="group-card-body2">
               <img src="https://res.cloudinary.com/dg1awjvew/image/upload/v1670306752/devices/lta82diahloq6imb69u9.jpg"></img>
               IPhone 14 Pro
             </div>
@@ -114,10 +98,7 @@ export default function Home() {
         {/* ------------------------------------------------------------------------ */}
         <div className="group-card">
           <div className="group-card-head">Get Our Other Products</div>
-          <div
-            className="group-card-body2"
-            style={{ display: "grid", placeItems: "center" }}
-          >
+          <div className="group-card-body2">
             <img src="https://play-lh.googleusercontent.com/VojafVZNddI6JvdDGWFrRmxc-prrcInL2AuBymsqGoeXjT4f9sv7KnetB-v3iLxk_Koi"></img>
           </div>
         </div>

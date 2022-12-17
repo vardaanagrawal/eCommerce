@@ -16,16 +16,9 @@ export default function Type() {
 
   useEffect(() => {
     fetchBrands();
-    if (type === "mobiles") {
-      setData(alldata.allMobiles);
-      // setBFData(alldata.allMobiles);
-    } else if (type === "laptops") {
-      setData(alldata.allLaptops);
-      // setBFData(alldata.allLaptops);
-    } else if (type === "tablets") {
-      setData(alldata.allTablets);
-      // setBFData(alldata.allTablets);
-    }
+    if (type === "mobiles") setData(alldata.allMobiles);
+    else if (type === "laptops") setData(alldata.allLaptops);
+    else if (type === "tablets") setData(alldata.allTablets);
   }, [alldata]);
   const [brands, setBrands] = useState([]);
   async function fetchBrands() {
@@ -349,11 +342,13 @@ export default function Type() {
             style={{ width: "100%" }}
           ></img>
         </div>
-        {data &&
-          data.map((item) => (
-            <TypeProduct key={item._id} item={item} type={type} />
-          ))}
-        {!data && arr.map((item) => <LoadingCard />)}
+        <div className="type-body-inner">
+          {data &&
+            data.map((item) => (
+              <TypeProduct key={item._id} item={item} type={type} />
+            ))}
+          {!data && arr.map((item) => <LoadingCard />)}
+        </div>
       </div>
     </div>
   );

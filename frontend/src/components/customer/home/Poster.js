@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./poster.css";
-import poster1 from "../../../images/poster1.jpg";
-import poster2 from "../../../images/poster2.jpg";
-import poster4 from "../../../images/poster4.jpg";
 
 export default function Poster() {
   const [posterPage, setPosterPage] = useState(1);

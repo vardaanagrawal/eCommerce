@@ -15,8 +15,6 @@
   position: absolute;
   left: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.3s;
   background: linear-gradient(grey, transparent);
 }
@@ -28,9 +26,10 @@
 }
 .poster-prev-btn,
 .poster-next-btn {
-  height: 300px;
+  height: 50px;
   position: absolute;
-  width: 150px;
+  width: 50px;
+  top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,16 +37,18 @@
   font-size: xx-large;
   z-index: 1;
   cursor: pointer;
-  top: 0;
-  padding-bottom: 180px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.poster-next-btn:hover,
+.poster-prev-btn:hover{
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .poster-prev-btn {
-  left: 0;
-  /* background: linear-gradient(to right, rgb(0, 0, 0), silver); */
+  left: 10px;
 }
 .poster-next-btn {
-  right: 0;
-  /* background: linear-gradient(to left, rgb(0, 0, 0), silver); */
+  right: 10px;
 }
 .poster-gradient {
   height: 200px;
@@ -58,13 +59,9 @@
   background: linear-gradient(to bottom, transparent, #eaededb3, #eaeded);
 }
 .poster-page1 img,
+.poster-page2 img,
 .poster-page3 img {
   width: 100%;
-  margin-top: 110px;
-}
-.poster-page2 img {
-  width: 100%;
-  margin-top: 10px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -73,18 +70,12 @@
   }
   .poster-prev-btn,
   .poster-next-btn {
-    height: 100px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     font-size: large;
+    top: 30px
   }
   .poster-gradient {
     height: 50px;
-  }
-  .poster-page1 img,
-  .poster-page3 img {
-    margin-top: 0px;
-  }
-  .poster-page2 img {
-    margin-top: -30px;
   }
 }

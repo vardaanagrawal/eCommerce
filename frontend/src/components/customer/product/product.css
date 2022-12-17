@@ -69,10 +69,17 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .product{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
   .product-box {
-    height: calc(100vh - 60px - 4vw);
+    height: max-content;
     width: 96vw;
     flex-direction: column;
+    margin-top: 2vw;
+    padding-bottom: 10px;
   }
   .product-img {
     height: 200px;
@@ -91,10 +98,11 @@
   }
   .product-details {
     padding-left: 20px;
-    margin: 20px 0px;
+    margin: 20px 0px 10px 0px;
   }
   .product-btns {
-    bottom: 10px;
+    position: relative;
+    top: 0px
   }
   .product-atc-btn,.product-bn-btn{
     width: 96%;
@@ -102,5 +110,6 @@
   }
   .product-price{
     text-align: center;
+    margin-bottom: 10px;
   }
 }
