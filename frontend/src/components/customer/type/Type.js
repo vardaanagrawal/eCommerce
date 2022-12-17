@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./type.css";
 import { useSelector } from "react-redux";
 import laptopposter from "../../../images/laptopposter.jpg";
+import tabletposter from "../../../images/tabletposter.jpg";
+import mobileposter from "../../../images/mobileposter.jpg";
 import TypeProduct from "./TypeProduct";
 import { Navigate } from "react-router-dom";
 import { getBrandsList } from "../../../api";
+import LoadingCard from "./LoadingCard";
 
 export default function Type() {
   var alldata = useSelector((state) => state.product);
@@ -205,6 +208,7 @@ export default function Type() {
       setData(fdata);
     }
   }
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
   // ---------------------------------------------------------------------------------------
 
@@ -238,7 +242,7 @@ export default function Type() {
               clear
             </button>
           </div>
-          <div className="filter-options">
+          <div className="filter-options" style={{ minHeight: "90px" }}>
             {brands.map((item) => (
               <div key={item._id} className="filter-option">
                 <input
@@ -321,7 +325,7 @@ export default function Type() {
             ))}
           </div>
           <br />
-          <div className="filter-head">Sort By</div>
+          {/* <div className="filter-head">Sort By</div>
           <div className="filter-options">
             {sortVal.map((item) => (
               <div className="filter-option" key={item}>
@@ -329,17 +333,27 @@ export default function Type() {
                 <label>{item}</label>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="type-body">
         <div>
-          <img src={laptopposter} style={{ width: "100%" }}></img>
+          <img
+            src={
+              type == "laptops"
+                ? laptopposter
+                : type == "tablets"
+                ? tabletposter
+                : mobileposter
+            }
+            style={{ width: "100%" }}
+          ></img>
         </div>
         {data &&
           data.map((item) => (
             <TypeProduct key={item._id} item={item} type={type} />
           ))}
+        {!data && arr.map((item) => <LoadingCard />)}
       </div>
     </div>
   );

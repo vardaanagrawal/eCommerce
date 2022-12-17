@@ -32,7 +32,9 @@ export default function TypeProduct({ item, type }) {
             (item.details.price * (100 - item.details.discount)) / 100
           )}
           &nbsp;
-          <span style={{fontSize: "large",color: "grey", textDecoration: "line-through"}}>&#8377;{item.details.price}</span>
+          <span className="product-original-price">
+            &#8377;{item.details.price}
+          </span>
         </div>
       </div>
     </Link>

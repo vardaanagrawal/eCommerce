@@ -2,7 +2,7 @@
   height: 500px;
   width: 100vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
   position: relative;
@@ -56,4 +56,35 @@
   bottom: 0;
   left: 0;
   background: linear-gradient(to bottom, transparent, #eaededb3, #eaeded);
+}
+.poster-page1 img,
+.poster-page3 img {
+  width: 100%;
+  margin-top: 110px;
+}
+.poster-page2 img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+  .poster {
+    height: 150px;
+  }
+  .poster-prev-btn,
+  .poster-next-btn {
+    height: 100px;
+    width: 50px;
+    font-size: large;
+  }
+  .poster-gradient {
+    height: 50px;
+  }
+  .poster-page1 img,
+  .poster-page3 img {
+    margin-top: 0px;
+  }
+  .poster-page2 img {
+    margin-top: -30px;
+  }
 }

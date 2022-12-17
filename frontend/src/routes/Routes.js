@@ -4,6 +4,7 @@ import Admin from "../components/admin/Admin";
 import Auth from "../components/auth/Auth";
 import Account from "../components/customer/account/Account";
 import Delivery from "../components/customer/account/Delivery";
+import Order from "../components/customer/account/Order";
 import Customer from "../components/customer/Customer";
 import Home from "../components/customer/home/Home";
 import PlaceOrders from "../components/customer/placeOrders/PlaceOrders";
@@ -18,6 +19,7 @@ export default function Routess() {
           <Route exact path="" element={<Home />}></Route>
           <Route exact path="account" element={<Account />}></Route>
           <Route exact path="deliverydetails" element={<Delivery />}></Route>
+          <Route exact path="myorders" element={<Order />}></Route>
           <Route exact path=":type" element={<Type />}></Route>
           <Route
             exact

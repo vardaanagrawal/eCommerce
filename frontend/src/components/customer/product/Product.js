@@ -6,6 +6,7 @@ import { getDevice, removeItemFromCart, updateCart } from "../../../api/index";
 import { updateCart as updateCartRedux } from "../../../redux/actions/updateCart";
 import { buyNow } from "../../../redux/actions/buyNow";
 import { Navigate } from "react-router-dom";
+import LoadingCard from './LoadingCard';
 
 export default function Product() {
   const dispatch = useDispatch();
@@ -44,23 +45,29 @@ export default function Product() {
   const [cartLoader, setCartoader] = useState(false);
   const a = useSelector((state) => state.customer);
   function handleBuyNow() {
-    const type = window.location.href.split("/")[3];
-    const id = window.location.href.split("/")[5];
-    const list = [
-      {
-        productID: id,
-        img: data.img,
-        name: data.name,
-        brand: data.brand,
-        qty: 1,
-        price: Math.floor(
-          (data.details.price * (100 - data.details.discount)) / 100
-        ),
-        type: type,
-      },
-    ];
-    dispatch(buyNow(list));
-    setBuy(true);
+    if (!customer.id) {
+      alert("To buy this product, please login");
+    } else {
+      const type = window.location.href.split("/")[3];
+      const id = window.location.href.split("/")[5];
+      const list = [
+        {
+          device: {
+            brand: data.brand,
+            details: {
+              price: data.details.price,
+              discount: data.details.discount,
+            },
+            img: data.img,
+            name: data.name,
+            _id: id,
+          },
+          qty: 1,
+        },
+      ];
+      dispatch(buyNow(list));
+      setBuy(true);
+    }
   }
 
   return (
@@ -104,7 +111,8 @@ export default function Product() {
             </div>
             <div className="product-btns">
               <button
-                className="product-bn-btn"
+                 className="product-bn-btn"
+                // className="button1"
                 onClick={() => {
                   handleBuyNow();
                 }}
@@ -145,6 +153,7 @@ export default function Product() {
           </div>
         </div>
       )}
+      {!data && <LoadingCard/>}
     </div>
   );
 }

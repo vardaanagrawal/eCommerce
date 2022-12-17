@@ -19,7 +19,18 @@ const cartSchema = mongoose.Schema(
   { timestamps: true }
 );
 const ordersSchema = mongoose.Schema(
-  { productID: { type: String, required: true } },
+  {
+    products: {
+      type: Array,
+      required: true,
+    },
+    deliveryAddress: addressSchema,
+    deliveryDate: { type: String, required: true },
+    amount: {
+      type: String,
+      required: true,
+    },
+  },
   { timestamps: true }
 );
 const customerSchema = mongoose.Schema(

@@ -67,3 +67,40 @@
   cursor: pointer;
   background-color: whitesmoke;
 }
+
+@media only screen and (max-width: 420px) {
+  .product-box {
+    height: calc(100vh - 60px - 4vw);
+    width: 96vw;
+    flex-direction: column;
+  }
+  .product-img {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .product-info {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+  }
+  .product-name,
+  .product-brand {
+    text-align: center;
+  }
+  .product-details {
+    padding-left: 20px;
+    margin: 20px 0px;
+  }
+  .product-btns {
+    bottom: 10px;
+  }
+  .product-atc-btn,.product-bn-btn{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .product-price{
+    text-align: center;
+  }
+}

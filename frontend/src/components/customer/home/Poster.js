@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./poster.css";
 import poster1 from "../../../images/poster1.jpg";
+import poster2 from "../../../images/poster2.jpg";
+import poster4 from "../../../images/poster4.jpg";
 
 export default function Poster() {
   const [posterPage, setPosterPage] = useState(1);
@@ -78,10 +80,14 @@ export default function Poster() {
         <i className="fa-solid fa-chevron-left"></i>
       </div>
       <div className="poster-page1">
-        <img src={poster1} style={{ width: "100%", marginTop: "110px" }}></img>
+        <img src={poster1}></img>
       </div>
-      <div className="poster-page2">page2</div>
-      <div className="poster-page3">page3</div>
+      <div className="poster-page2">
+        <img src={poster2}></img>
+      </div>
+      <div className="poster-page3">
+        <img src={poster4}></img>
+      </div>
       <div
         className="poster-next-btn"
         onClick={() => {

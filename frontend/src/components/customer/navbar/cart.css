@@ -1,16 +1,3 @@
-.button3 {
-  font-family: "Poppins", sans-serif;
-  background-color: goldenrod;
-  border: none;
-  border-radius: 10px;
-  width: 100%;
-  font-size: x-large;
-  padding: 5px 0px;
-  cursor: pointer;
-}
-.button3:active {
-  background-color: rgb(180, 136, 26);
-}
 .cart,
 .profile {
   height: 100vh;
@@ -45,7 +32,7 @@
 }
 .cart-foot {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   height: 100px;
   width: 100%;
   display: flex;
@@ -143,4 +130,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 420px){
+  .cart,.profile{
+    width: 100vw;
+  }
+  .cart-box,.profile-box{
+    width: calc(100vw - 20px);
+    padding: 0px 10px;
+  }
+  .cart-box2{
+    
+  }
 }

@@ -38,6 +38,9 @@
   color: white;
   cursor: pointer;
 }
+.account-edit-btn:active{
+  background-color: rgb(195, 148, 29);
+}
 .account-btns {
   margin-top: 30px;
   display: flex;
@@ -93,4 +96,30 @@
   border-radius: 5px;
   margin: 10px 0px;
   padding: 10px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+.my-orders{
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.my-orders-item{
+  box-shadow: silver 1px 1px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  height: max-content;
+  width: 300px;
+}
+
+
+
+@media only screen and (max-width: 420px){
+  .account-box{
+    max-height: 80vh;
+    overflow: scroll;
+    width: 85vw;
+    margin: 30px 0px 0px 0px;
+  }
 }

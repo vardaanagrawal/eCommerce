@@ -19,6 +19,7 @@ const {
   updateCustomerPassword,
   deleteCustomer,
   addDeliveryAddress,
+  placeOrder,
 } = require("../controllers/customerController");
 
 router.get("/customer/:id", getCustomer);
@@ -30,6 +31,7 @@ router.post("/customer/update/name", updateCustomerName);
 router.post("/customer/update/password", updateCustomerPassword);
 router.post("/customer/delete", deleteCustomer);
 router.post("/customer/deliveryAddress", addDeliveryAddress);
+router.post("/customer/update/orders", placeOrder);
 
 //----product routes-----------------------------------------------------------------------
 

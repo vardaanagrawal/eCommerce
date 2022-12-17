@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCart, removeItemFromCart, getCart } from "../../../api";
 import { updateCart as updateCartRedux } from "../../../redux/actions/updateCart";
+import { buyNow } from "../../../redux/actions/buyNow";
+import { Navigate } from "react-router-dom";
 
 export default function Navbar() {
   const customer = useSelector((state) => state.customer.customer);
@@ -13,7 +15,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <Link to="/">
-        <div className="logo">LOGO</div>
+        <div className="logo">E Mart</div>
       </Link>
       {/* <div className="searchbar">
         <input
@@ -35,7 +37,7 @@ export default function Navbar() {
         </div>
         {!customer.id && (
           <Link to="/authenticate">
-            <button className="nav-signin-btn">Sign in</button>
+            <button className="button1">Sign in</button>
           </Link>
         )}
         {customer.id && (
@@ -102,6 +104,7 @@ function Cart({ setCart }) {
     dispatch(updateCartRedux(cart));
   }
 
+  const [buy, setBuy] = useState(false);
   return (
     <div
       className="cart"
@@ -141,7 +144,7 @@ function Cart({ setCart }) {
             </div>
             <div className="cart-foot">
               <button
-                className="button3"
+                className="button1"
                 onClick={(e) => {
                   document.querySelector(".cart-box").style.right = "-400px";
                   setTimeout(() => {
@@ -154,73 +157,109 @@ function Cart({ setCart }) {
             </div>
           </div>
         )}
-        {cart && (
-          <div className="full-cart-body">
-            {cart.map((item) => (
-              <div key={item.device._id} className="cart-item">
-                <div className="cart-item-img">
-                  <img src={item.device.img}></img>
-                </div>
-                <div
-                  className="cart-item-info"
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
-                  <span style={{ fontWeight: "600" }}>{item.device.name}</span>
-                  <span style={{ color: "grey", marginTop: "-2px" }}>
-                    {item.device.brand}
-                  </span>
-                  <span style={{ fontSize: "large", marginTop: "5px" }}>
-                    &#8377;
-                    {Math.floor(
-                      (item.device.details.price *
-                        (100 - item.device.details.discount)) /
-                        100
-                    )}
-                  </span>
-                </div>
-                <div className="cart-item-qty">
-                  <div className="cart-item-qty-head">qty:</div>
-                  <div className="cart-item-qty-body">
-                    <button
-                      disabled={loader}
-                      className="cart-qty-btn"
-                      onClick={() => {
-                        handleUpdateCart(
-                          item.type,
-                          item.device._id,
-                          item.qty - 1
-                        );
-                      }}
-                    >
-                      -
-                    </button>
-                    {item.qty}
-                    <button
-                      disabled={loader}
-                      className="cart-qty-btn"
-                      onClick={() => {
-                        handleUpdateCart(
-                          item.type,
-                          item.device._id,
-                          item.qty + 1
-                        );
-                      }}
-                    >
-                      +
-                    </button>
+        {cart && cart.length != 0 && (
+          <div className="cart-box2">
+            <div className="full-cart-body">
+              {cart.map((item) => (
+                <div key={item.device._id} className="cart-item">
+                  <div className="cart-item-img">
+                    <img src={item.device.img}></img>
                   </div>
-                  <div className="cart-item-qty-foot">
-                    <button
-                      onClick={() => {
-                        handleRemoveItem(item.device._id);
-                      }}
-                    >
-                      Remove
-                    </button>
+                  <div
+                    className="cart-item-info"
+                    style={{ display: "flex", flexDirection: "column" }}
+                  >
+                    <span style={{ fontWeight: "600" }}>
+                      {item.device.name}
+                    </span>
+                    <span style={{ color: "grey", marginTop: "-2px" }}>
+                      {item.device.brand}
+                    </span>
+                    <span style={{ fontSize: "large", marginTop: "5px" }}>
+                      &#8377;
+                      {Math.floor(
+                        (item.device.details.price *
+                          (100 - item.device.details.discount)) /
+                          100
+                      )}
+                    </span>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="cart-item-qty-head">qty:</div>
+                    <div className="cart-item-qty-body">
+                      <button
+                        disabled={loader}
+                        className="cart-qty-btn"
+                        onClick={() => {
+                          handleUpdateCart(
+                            item.type,
+                            item.device._id,
+                            item.qty - 1
+                          );
+                        }}
+                      >
+                        -
+                      </button>
+                      {item.qty}
+                      <button
+                        disabled={loader}
+                        className="cart-qty-btn"
+                        onClick={() => {
+                          handleUpdateCart(
+                            item.type,
+                            item.device._id,
+                            item.qty + 1
+                          );
+                        }}
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div className="cart-item-qty-foot">
+                      <button
+                        onClick={() => {
+                          handleRemoveItem(item.device._id);
+                        }}
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="cart-foot">
+              <button
+                className="button1"
+                onClick={(e) => {
+                  dispatch(buyNow(cart));
+                  setBuy(true);
+                  document.querySelector(".cart-box").style.right = "-400px";
+                  setTimeout(() => {
+                    setCart(false);
+                  }, 300);
+                }}
+              >
+                Buy Now
+              </button>
+              <button
+                className="cart-close-btn"
+                style={{
+                  padding: "10px",
+                  border: "solid silver 1px",
+                  borderRadius: "5px",
+                  fontSize: "large",
+                }}
+                onClick={(e) => {
+                  document.querySelector(".cart-box").style.right = "-400px";
+                  setTimeout(() => {
+                    setCart(false);
+                  }, 300);
+                }}
+              >
+                Close
+              </button>
+            </div>
           </div>
         )}
         {!customer.id && (
@@ -234,13 +273,33 @@ function Cart({ setCart }) {
               </div>
             </div>
             <div className="cart-foot">
-              <Link to="/authenticate">
-                <button className="button3">Login</button>
+              <Link to="/authenticate" style={{ width: "100%" }}>
+                <button className="button1" style={{ width: "100%" }}>
+                  Login
+                </button>
               </Link>
+              <button
+                className="cart-close-btn"
+                style={{
+                  padding: "10px",
+                  border: "solid silver 1px",
+                  borderRadius: "5px",
+                  fontSize: "large",
+                }}
+                onClick={(e) => {
+                  document.querySelector(".cart-box").style.right = "-400px";
+                  setTimeout(() => {
+                    setCart(false);
+                  }, 300);
+                }}
+              >
+                Close
+              </button>
             </div>
           </div>
         )}
       </div>
+      {buy && <Navigate to="/placeorder" />}
     </div>
   );
 }
@@ -273,7 +332,20 @@ function Profile({ setProfile }) {
       }}
     >
       <div className="profile-box">
-        <div className="profile-head">Hello, {customer.name.split(" ")[0]}</div>
+        <div className="profile-head">
+          Hello, {customer.name.split(" ")[0]}
+          <span
+            className="profile-close-btn"
+            onClick={() => {
+              document.querySelector(".profile-box").style.right = "-400px";
+              setTimeout(() => {
+                setProfile(false);
+              }, 300);
+            }}
+          >
+            <i class="fa-solid fa-x"></i>
+          </span>
+        </div>
         <div className="profile-body">
           <Link
             to="/account"

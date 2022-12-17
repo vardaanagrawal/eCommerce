@@ -206,6 +206,17 @@ const addDeliveryAddress = async (req, res) => {
   res.send({ success: true, message: "address added successfully" });
 };
 
+const placeOrder = async (req, res) => {
+  const id = req.body.id;
+  const user = await CustomerModel.findByIdAndUpdate(
+    { _id: id },
+    {
+      $push: { orders: req.body.data },
+    }
+  );
+  res.send({ success: true, message: "order placed" });
+};
+
 module.exports = {
   getCustomer,
   updateCart,
@@ -215,4 +226,5 @@ module.exports = {
   deleteCustomer,
   removeItemFromCart,
   addDeliveryAddress,
+  placeOrder,
 };

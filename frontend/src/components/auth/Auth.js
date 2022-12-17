@@ -9,6 +9,7 @@ export default function Auth() {
 
   return (
     <div className="auth">
+      <div className="auth-logo">E Mart</div>
       {authType == "SIGNUP" && <Signup setAuthType={setAuthType} />}
       {authType == "LOGIN" && <Login setAuthType={setAuthType} />}
       {authType == "SEND_OTP" && <Otp setAuthType={setAuthType} />}
@@ -81,64 +82,66 @@ function Signup({ setAuthType }) {
   }
 
   return (
-    <div className="auth-form">
-      <div className="auth-form-head">Create Account</div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSignup();
-        }}
-      >
-        <label>Name</label>
-        <input
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-            setNameErr("");
+    
+      <div className="auth-form">
+        <div className="auth-form-head">Create Account</div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSignup();
           }}
-        ></input>
-        <label className="error-msg">{nameErr}</label>
-        <label>Email</label>
-        <input
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            setEmailErr("");
-          }}
-        ></input>
-        <label className="error-msg">{emailErr}</label>
-        <label>Password</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-            setPasswordErr("");
-          }}
-        ></input>
-        <label className="error-msg">{passwordErr}</label>
-        {!loader && <input type="submit" value="Continue"></input>}
-        {loader && (
-          <div
-            className="auth-loader"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+        >
+          <label>Name</label>
+          <input
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+              setNameErr("");
             }}
-          >
-            <div className="loader"></div>
-          </div>
-        )}
-        <input
-          type="button"
-          onClick={() => {
-            setAuthType("LOGIN");
-          }}
-          value="Already have an account? Log In"
-        ></input>
-      </form>
-    </div>
+          ></input>
+          <label className="error-msg">{nameErr}</label>
+          <label>Email</label>
+          <input
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setEmailErr("");
+            }}
+          ></input>
+          <label className="error-msg">{emailErr}</label>
+          <label>Password</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setPasswordErr("");
+            }}
+          ></input>
+          <label className="error-msg">{passwordErr}</label>
+          {!loader && <input type="submit" value="Continue"></input>}
+          {loader && (
+            <div
+              className="auth-loader"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <div className="loader"></div>
+            </div>
+          )}
+          <input
+            type="button"
+            onClick={() => {
+              setAuthType("LOGIN");
+            }}
+            value="Already have an account? Log In"
+          ></input>
+        </form>
+      </div>
+    
   );
 }
 //----------------------------------------------------------------------------------------
@@ -229,6 +232,7 @@ function Login({ setAuthType }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              width: "96%"
             }}
           >
             <div className="loader"></div>

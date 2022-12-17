@@ -47,6 +47,11 @@ export async function addDelAddress(id, data) {
   return res.data;
 }
 
+export async function placeOrder(id, data) {
+  const res = await axios.post(`${baseURL}/customer/update/orders`,{id,data});
+  return res.data;
+}
+
 //-----product api----------------------------------------------------------------------
 export async function getRandomProducts() {
   const res = await axios.get(`${baseURL}/product/random`);

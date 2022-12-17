@@ -13,7 +13,7 @@ export default function Delivery() {
 
   setTimeout(() => {
     setLoader(false);
-  }, 500);
+  }, 1000);
 
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");

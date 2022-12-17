@@ -36,7 +36,7 @@
   padding: 7px;
   font-family: "Poppins", sans-serif;
 }
-.auth-form form input[type="submit"] ,
+.auth-form form input[type="submit"],
 .account-body form input[type="submit"],
 .auth-loader {
   background-color: goldenrod;
@@ -57,4 +57,48 @@
   color: red;
   height: 20px;
   text-align: right;
+}
+
+.auth-logo{
+  font-size: 44px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  left: 50px;
+}
+@media only screen and (max-width: 420px) {
+  .auth{
+    background: none;
+    background-color: whitesmoke;
+  }
+  .auth-logo{
+    font-size: 50px;
+    left: 50vw;
+    transform: translate(-50%);
+  }
+  .auth-form{
+    height: calc(100vh - 140px - 3vw);
+    top: 100px;
+    left: 0px;
+    width: 94%;
+    padding: 20px 2%;
+    margin: 1%;
+    border: none
+  }
+  .auth-form form input[type="button"]{
+    position: absolute;
+    bottom: 10px;
+    width: 96%;
+  }
+  .auth-form form input[type="submit"]{
+    position: absolute;
+    bottom: 60px;
+    width: 96% ;
+  }
+  .auth-loader{
+    position: absolute;
+    bottom: 60px;
+    width: 96%;
+    padding: 7px 0px;
+  }
 }
