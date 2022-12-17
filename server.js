@@ -28,6 +28,6 @@ if (process.env.NODE_ENV == "production") {
   });
 }
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 7000, () => {
   console.log("Server running successfully");
 });
