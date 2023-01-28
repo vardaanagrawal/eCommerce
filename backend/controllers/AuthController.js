@@ -72,7 +72,7 @@ const sendOTP = async (req, res) => {
       service: "gmail",
       auth: {
         user: "agrawalvardaan85@gmail.com",
-        pass: "vbjatdichurqekqy",
+        pass: "rixlhcribeykqygz",
       },
     });
     var otp = Math.floor(100000 + Math.random() * 900000);
@@ -102,7 +102,7 @@ const sendOTP = async (req, res) => {
 
 //-----------------------------------------------------------------------------------------
 const checkOTP = async (otpID, otp) => {
-  const validOTP = await OTPModel.findById({_id: otpID});
+  const validOTP = await OTPModel.findById({ _id: otpID });
   if (!validOTP) {
     return { success: false, message: "OTP Expired" };
   } else {
