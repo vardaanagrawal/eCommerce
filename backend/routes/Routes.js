@@ -47,4 +47,21 @@ router.get("/product/:type/:id", getDevice);
 router.get("/products/:type/all", getAllDevices);
 router.get("/products/brands/:type", getBrands);
 
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+
+const {
+  postProduct,
+  getProduct,
+  postProductBrand,
+  getProductBrand,
+  updateProductImg,
+} = require("../controllers/AdminProductController");
+
+router.post("/productBrand/:type", postProductBrand);
+router.get("/productBrand/:type", getProductBrand);
+router.post("/product/:type", postProduct);
+router.get("/product/:type", getProduct);
+router.post("/productImg/update/:type", updateProductImg);
+
 module.exports = router;

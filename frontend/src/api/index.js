@@ -27,27 +27,38 @@ export async function updateCustomerName(id, name) {
   return res.data;
 }
 export async function updateCustomerPassword(id, oldPassword, newPassword) {
-  const res = await axios.post(`/customer/update/password`, {
-    id: id,
-    oldPassword: oldPassword,
-    newPassword: newPassword,
-  });
+  const res = await axios.post(
+    `/customer/update/password`,
+    {
+      id: id,
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+    }
+  );
   return res.data;
 }
 export async function deleteCustomer(id) {
-  const res = await axios.post(`/customer/delete`, { id: id });
+  const res = await axios.post(`/customer/delete`, {
+    id: id,
+  });
   return res.data;
 }
 export async function addDelAddress(id, data) {
-  const res = await axios.post(`/customer/deliveryAddress`, {
-    id: id,
-    data: data,
-  });
+  const res = await axios.post(
+    `/customer/deliveryAddress`,
+    {
+      id: id,
+      data: data,
+    }
+  );
   return res.data;
 }
 
 export async function placeOrder(id, data) {
-  const res = await axios.post(`/customer/update/orders`,{id,data});
+  const res = await axios.post(`/customer/update/orders`, {
+    id,
+    data,
+  });
   return res.data;
 }
 
@@ -85,9 +96,69 @@ export async function getCart(id) {
 }
 
 export async function removeItemFromCart(customerID, productID) {
-  const res = await axios.post(`/customer/cart/removeItem`, {
-    customerID: customerID,
-    productID: productID,
-  });
+  const res = await axios.post(
+    `/customer/cart/removeItem`,
+    {
+      customerID: customerID,
+      productID: productID,
+    }
+  );
   return res.data;
+}
+
+//-------------------------------------------------------------------------------------------
+//--------Admin Product Routes----------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+
+export async function postProductBrand(type, name) {
+  const response = await axios.post(
+    `/productBrand/${type}`,
+    { name: name }
+  );
+  return response;
+}
+
+export async function getProductBrand(type) {
+  const response = await axios.get(
+    `/productBrand/${type}`
+  );
+  console.log(response);
+  return response;
+}
+
+export async function postProduct(type, brand, name, details, img) {
+  const response = await axios.post(`/product/${type}`, {
+    brand: brand,
+    name: name,
+    details: details,
+    img: img,
+  });
+  return response;
+}
+export async function getProduct(type) {
+  const response = await axios.get(`/product/${type}`);
+  return response;
+}
+
+export async function postProductImg(data) {
+  const response = await axios.post(
+    "https://api.cloudinary.com/v1_1/dg1awjvew/upload",
+    data
+  );
+  return response;
+}
+
+export async function updateProductImg(id, data, type) {
+  const response = await axios.post(
+    "https://api.cloudinary.com/v1_1/dg1awjvew/upload",
+    data
+  );
+  const res = await axios.post(
+    `/productImg/update/${type}`,
+    {
+      id: id,
+      img: response.data.secure_url,
+    }
+  );
+  return res;
 }

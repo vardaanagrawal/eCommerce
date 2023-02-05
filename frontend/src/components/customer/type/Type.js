@@ -22,7 +22,13 @@ export default function Type() {
   }, [alldata]);
   const [brands, setBrands] = useState([]);
   async function fetchBrands() {
-    const res = await getBrandsList(type);
+    const res = await getBrandsList(
+      type === "mobiles"
+        ? "Mobile"
+        : type === "laptops"
+        ? "Laptop"
+        : type === "tablets" && "Tablet"
+    );
     setBrands(res);
   }
 

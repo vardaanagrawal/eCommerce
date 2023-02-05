@@ -1,0 +1,399 @@
+.admin-head {
+  height: 100px;
+  padding-left: 100px;
+  line-height: 100px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.admin-body {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.admin-Mobile,
+.admin-Laptop,
+.admin-Tablet {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: silver 2px 2px 40px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.3s;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-Mobile img,
+.admin-Laptop img,
+.admin-Tablet img {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.3s;
+  margin: 10%;
+}
+.admin-Mobile img:hover,
+.admin-Laptop img:hover,
+.admin-Tablet img:hover {
+  transform: scale(1.1);
+}
+.admin-Mobile {
+  top: calc(50% - 150px);
+  left: calc(50vw - 480px);
+}
+.admin-Laptop {
+  top: calc(50% - 150px);
+  left: calc(50vw - 150px);
+}
+.admin-Tablet {
+  top: calc(50% - 150px);
+  left: calc(50vw + 180px);
+}
+.admin-box {
+  display: none;
+  height: 95%;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 60px;
+  box-shadow: silver 1px 1px 10px;
+  overflow: hidden;
+}
+.admin-action-btns {
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  display: none;
+}
+.add-new-btn,
+.existing-list-btn {
+  background-color: white;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 10px;
+  box-shadow: silver 1px 1px 10px;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------------*/
+
+.Mobile-form {
+  height: 100%;
+  width: 80vw;
+  display: flex;
+}
+.Mobile-brand-section {
+  height: 100%;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  border-right: solid gray 1px;
+}
+.existing-brands {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.existing-brand-head {
+  font-size: larger;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+.existing-brand-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 350px;
+  width: 90%;
+  padding: 10px 0px;
+  box-shadow: silver 1px 1px 10px inset;
+  border-radius: 10px;
+}
+.existing-brand-list-item,
+.existing-brand-list-item-selected {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: silver 1px 1px 10px;
+  cursor: pointer;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.existing-brand-list-item img,
+.existing-brand-list-item-selected img {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+}
+.existing-brand-list-item-selected {
+  transform: scale(1.1);
+  box-shadow: black 1px 1px 10px;
+}
+.new-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px 30px 0px 0px;
+  transition: all 0.3s;
+  background-color: white;
+  padding-top: 30px;
+  box-shadow: silver 1px 1px 20px;
+}
+.new-brand-btn {
+  width: 80%;
+  background-color: gold;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.input-box {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-field {
+  position: absolute;
+  background: none;
+  padding: 10px 20px;
+  border: solid black 2px;
+  border-radius: 10px;
+  font-size: larger;
+}
+.input-label {
+  position: absolute;
+  top: 7px;
+  left: 25px;
+  font-size: larger;
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: text;
+  transition: all 0.1s;
+  color: gray;
+}
+.input-field:focus ~ .input-label {
+  top: -10px;
+  left: 20px;
+  font-size: small;
+  padding: 2px 8px;
+  color: goldenrod;
+}
+.input-field:not(:focus).input-field:not(:placeholder-shown) ~ .input-label {
+  top: -10px;
+  left: 20px;
+  font-size: small;
+  padding: 2px 8px;
+  color: goldenrod;
+}
+.brand-logo-preview {
+  height: 140px;
+  width: 140px;
+  border: solid black 2px;
+  border-radius: 50%;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+.brand-logo-input input {
+  display: none;
+}
+.brand-logo-input {
+  margin: 0px 0px 40px 0px;
+}
+.brand-logo-input label {
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: gold;
+  cursor: pointer;
+}
+
+.new-brand-action-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 80px;
+}
+.new-brand-save-btn {
+  background-color: gold;
+  border: none;
+  width: 90%;
+  padding: 10px 20px;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.new-brand-cancel-btn {
+  border: solid 2px gold;
+  background: none;
+  width: 90%;
+  padding: 6px 20px;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.Mobile-product-section {
+  height: 100%;
+  width: calc(100% - 300px);
+}
+.product-section-head {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.product-save-btn {
+  background-color: gold;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: large;
+  font-weight: bold;
+  margin-top: -10px;
+}
+.product-section-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 20px;
+  grid-column-gap: 20px;
+}
+.Mobile-name {
+  position: relative;
+}
+.Mobile-specs,
+.Mobile-description {
+  height: 320px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: silver 1px 1px 10px inset;
+}
+.Mobile-images {
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Mobile-name-input {
+  position: absolute;
+  font-size: larger;
+  padding: 10px 0px;
+  background: none;
+  border: silver 2px solid;
+  border-radius: 10px;
+  width: 100%;
+}
+.Mobile-name-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: larger;
+  transition: all 0.1s;
+  background-color: white;
+  padding: 0px 10px;
+  cursor: text;
+}
+.Mobile-name-input:focus ~ .Mobile-name-label {
+  font-size: small;
+  top: -10px;
+  left: 10px;
+}
+.Mobile-name-input:not(:focus).Mobile-name-input:not(:placeholder-shown)
+  ~ .Mobile-name-label {
+  font-size: small;
+  top: -10px;
+  left: 10px;
+}
+.description-head,
+.specs-head {
+  font-size: medium;
+  font-weight: 400;
+  position: absolute;
+  background-color: white;
+  top: -12px;
+  padding: 0px 10px;
+}
+.description-input {
+  width: 98%;
+  resize: none;
+}
+.Mobile-specs input {
+  width: 21%;
+  margin: 2px;
+  font-size: large;
+}
+
+.images-btn {
+  padding: 5px 20px;
+  border-radius: 10px;
+  box-shadow: silver 1px 1px 10px;
+  cursor: pointer;
+}
+.images-btn:active {
+  transform: scale(0.9);
+  box-shadow: rgba(192, 192, 192, 0.5) 1px 1px 10px;
+}
+.images-preview {
+  margin-top: 10px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+.img1-preview,
+.img2-preview,
+.img3-preview,
+.img4-preview,
+.img5-preview {
+  height: 100%;
+  width: 20%;
+}
+.error-message-box {
+  position: absolute;
+  bottom: 150px;
+  color: Red;
+  font-weight: bold;
+  display: none;
+}
+.back-to-category {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: white;
+  padding: 5px 20px;
+  box-shadow: silver 1px 1px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+.images-preview img {
+  height: 100%;
+  width: 100%;
+}

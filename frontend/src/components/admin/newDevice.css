@@ -1,0 +1,252 @@
+.button1 {
+  background-color: goldenrod;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  padding: 10px 30px;
+  box-shadow: silver 1px 1px 10px 1px;
+  cursor: pointer;
+}
+.button1:active {
+  box-shadow: rgba(192, 192, 192, 0.2) 1px 1px 10px 1px;
+}
+.button2 {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 30px;
+  color: grey;
+  font-size: large;
+  font-weight: 700;
+  padding: 10px 30px;
+  box-shadow: silver 1px 1px 10px 1px;
+  cursor: pointer;
+}
+.button2:active {
+  box-shadow: rgba(192, 192, 192, 0.2) 1px 1px 10px 1px;
+}
+
+/*------------------------------------------------*/
+.new-device {
+  width: 100%;
+}
+.new-device-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid silver 1px;
+}
+.new-device-head h2 {
+  margin-left: 50px;
+}
+.new-device-head button {
+  margin-right: 50px;
+}
+.new-device-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.new-device-brand,
+.new-device-name,
+.new-device-desc,
+.new-device-img {
+  border: solid 1px silver;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  width: 86%;
+}
+.new-device-brand-head,
+.new-device-name-head,
+.new-device-desc-head,
+.new-device-img-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.new-device-brand-head button {
+  padding: 5px 15px;
+}
+.new-device-brand-body select {
+  width: 100%;
+  font-size: large;
+  padding: 5px;
+  border-radius: 5px;
+}
+.new-device-name input {
+  width: calc(100% - 15px);
+  padding: 5px;
+  font-size: large;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+.new-device-desc-body {
+  display: flex;
+  flex-direction: column;
+}
+.new-device-desc-body input {
+  font-size: large;
+  margin: 5px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid black 1px;
+}
+.new-device-img-prev {
+  height: 300px;
+  border: solid silver 1px;
+}
+
+/*-----------------------------------*/
+
+.new-device-brand-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  margin-top: -100px;
+  display: none;
+}
+.new-device-brand-form form {
+  width: 380px;
+  height: 95vh;
+  padding: 10px;
+  margin-top: 1vh;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  right: -410px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.new-device-brand-form form label {
+  font-size: larger;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.new-device-brand-form form input {
+  font-size: large;
+  border-radius: 5px;
+  padding: 10px;
+}
+.loader {
+  height: 18px;
+  width: 18px;
+  border: solid white 2px;
+  border-right: none;
+  border-radius: 50%;
+  transition: all 1s;
+  animation: loader 800ms linear 0s infinite forwards normal;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*------------------------------------------------------------------------------*/
+
+.existing-device {
+  width: 100%;
+}
+.existing-device-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: x-large;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 1px silver;
+  margin: 10px;
+}
+.existing-device-head select {
+  font-size: large;
+  padding: 5px;
+  border-radius: 5px;
+}
+.existing-device-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(auto-fill, 300px);
+  grid-row-gap: 20px;
+  justify-content: center;
+  place-items: center;
+  overflow: scroll;
+  height: calc(100% - 80px);
+}
+.existing-device-card {
+  font-size: larger;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: silver 1px 1px 10px inset;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.existing-device-details {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -100px;
+  z-index: 100;
+  display: none;
+}
+.existing-device-details-box {
+  background-color: white;
+  border-radius: 10px;
+  height: calc(100vh - 40px);
+  width: 400px;
+  position: absolute;
+  right: -450px;
+  padding: 10px;
+  margin: 10px;
+  transition: all 0.3s;
+}
+.existing-device-details-box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.existing-device-details-box-foot {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+.existing-device-details-box-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
