@@ -339,11 +339,7 @@ export default function Type() {
         <div>
           <img
             src={
-              type == "laptops"
-                ? "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Laptops/Revamp/D54261251_IN_PC_Laptops_PageRevamp_BAU_HEDDER_2.jpg"
-                : type == "tablets"
-                ? "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/samsung/dec22/TabS8_Amazon_1500x300_.jpg"
-                : "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img21/Wireless/vinambia/SUD-Dec/1_Header_PC.jpg"
+              "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Laptops/Revamp/D54261251_IN_PC_Laptops_PageRevamp_BAU_HEDDER_2.jpg"
             }
             style={{ width: "100%" }}
           ></img>
