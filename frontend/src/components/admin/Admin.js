@@ -58,7 +58,7 @@ export default function Admin() {
   const categoryList = [
     {
       name: "Mobile",
-      img: "https://www.jio.com/medias/493177779-i-1-Digital-300Wx300H?context=bWFzdGVyfHJvb3R8Mzc1NjN8aW1hZ2UvcG5nfGhlYS9oMDUvODg5MDIwODIyMzI2Mi5wbmd8ZDFhY2I3MTFmNDAwNmM0YzU2OWU1ZDBiYzY4MDYxOGYxNWNkMGUxNWU0ZTIwYTRjYTc2OTlkNzY0OTJjOWIxMA",
+      img: "https://res.cloudinary.com/dg1awjvew/image/upload/v1670306752/devices/lta82diahloq6imb69u9.jpg",
     },
     {
       name: "Laptop",
@@ -80,8 +80,12 @@ export default function Admin() {
               handleOpenCategory(item.name);
             }}
             key={item.name}
+            style={{display: "flex", alignItems: "center", justifyContent: "center"}}
           >
-            <img src={item.img}></img>
+            <img
+              src={item.img}
+              style={{ height: "50%", width: "auto", borderRadius: "0" }}
+            ></img>
           </div>
         ))}
         <div className="admin-action-btns">

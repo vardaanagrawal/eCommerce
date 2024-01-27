@@ -19,21 +19,21 @@ export default function Home() {
       data: mobiles,
       deviceType: "mobiles",
       poster:
-        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Wireless/AdvantagePrime/BAU/15thNov/D46321486_IN_WLME_Advantage_for_prime_PC_ingress-banner_1500x300.jpg",
+        "https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/G/31/img22/Laptops/Smartchoice/Laptops/Header/Revised/sep_1500x300._CB595974029_.jpg",
     },
     {
       type: "Newly Launched Laptops",
       data: laptops,
       deviceType: "laptops",
       poster:
-        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/Smart-choice/D38878434_IN_PC_Laptops_BAU-February-Smart-choice-laptops_1500x300_2.jpg",
+        "https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/G/31/img23/BAU-Dec/Laptops_Brand-Banners/Dell_Vostro14_3420_ELP_1500X300._CB570494119_.jpg",
     },
     {
       type: "Most productive Tablets",
       data: tablets,
       deviceType: "tablets",
       poster:
-        "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Laptops/LapDay/ASUS-ROG-Gaming_1500-x-300.jpg",
+        "https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/G/31/img23/CEPC/MED/JAN/header/MED_PC_1500X300._CB584609942_.jpg",
     },
   ];
   return (

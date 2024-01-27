@@ -80,10 +80,10 @@ export default function Poster() {
         <img src="https://m.media-amazon.com/images/I/61IT-3Pd+xL._SX3000_.jpg"></img>
       </div>
       <div className="poster-page2">
-        <img src="https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Wireless/Samsung/SamsungBAU/TheBigHolidaySale_dec/D66208672_IN_WLME_SamsungBAU_BigHolidaySale_15thDec_PC_1500x500.jpg"></img>
+        <img src="https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_849526-T3/images/G/31/img24/MED/hero/25/s5/MED_PC_TallHero_1500x600._CB583217599_.jpg"></img>
       </div>
       <div className="poster-page3">
-        <img src="https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img21/Wireless/katariy/Category_page/DEC_revamp/D64835888_WLD_OnePlus_Community_Sale_1500_1.jpg"></img>
+        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/G/31/img23/BAU-Dec/Laptops_Brand-Banners/Dell_Vostro14_3420_ELP_1500X300._CB570494119_.jpg"></img>
       </div>
       <div
         className="poster-next-btn"
